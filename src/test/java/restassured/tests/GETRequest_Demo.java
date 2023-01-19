@@ -11,11 +11,6 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
 
-//To Check
-
-//Scenario 1: get count of ids present
-//negative cases 1: when header app-id is not provide
-
 
 public class GETRequest_Demo {
 	
@@ -29,7 +24,6 @@ public class GETRequest_Demo {
 	@Test
 	public void getUserList() 
 	
-	
 	{
 		response=
 		given()
@@ -38,13 +32,12 @@ public class GETRequest_Demo {
 		.when()
 			.get("https://dummyapi.io/data/v1/user")
 		.then()
-		//.log().body()   //This also prints all body response 
+		//.log().body()   // prints all body response 
 		.statusCode(200)
 		.statusLine("HTTP/1.1 200 OK")
 		.extract().response();
 		response.asString();
 		System.out.println("user list is -->" +jsonString);
-		
 			
 	}
 	
@@ -53,7 +46,6 @@ public class GETRequest_Demo {
 	@Test
 	public void getUsers_Pagination()
 	{
-		
 		
 		given()
 			.header("app-id","63c6f550f56487ebb8d435fc")
@@ -101,7 +93,6 @@ public class GETRequest_Demo {
 	}
 	
 	
-	
 	//Scenario 4: To Get user by ID: //Test using Path Parameters which gets appended to URI
 	
 	@Test
@@ -126,7 +117,5 @@ public class GETRequest_Demo {
 		System.out.println("GET User by id response is-->" +jsonString);
 
 	}
-	
-	
 
 }
