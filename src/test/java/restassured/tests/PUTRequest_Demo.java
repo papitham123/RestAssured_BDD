@@ -14,7 +14,6 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
 
-//Email id should not be updated negative case to be covered
 
 
 public class PUTRequest_Demo {
@@ -23,8 +22,8 @@ public class PUTRequest_Demo {
 	Response response;
 	String jsonString;
 
-	/*
-	
+
+//Scenario 1: Update user using Map	
 	@Test
 	public void testUpdateUser()
 	{
@@ -57,9 +56,6 @@ public class PUTRequest_Demo {
 		
 		assertEquals(200,response.getStatusCode());
 	}
-	
-	
-	*/
 	
 	
 	//Scenario 2: Update user using randomStringutils class	
@@ -96,13 +92,10 @@ public class PUTRequest_Demo {
 				.statusCode(200)
 				.extract().response();
 				
-									
-			
 			jsonString=response.asString();
 			
 			System.out.println("updated user is " +jsonString);
 			
 		}
-	
 	
 }

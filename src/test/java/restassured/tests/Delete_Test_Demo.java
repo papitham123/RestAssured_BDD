@@ -43,11 +43,7 @@ public class Delete_Test_Demo {
 		}
 		
 		System.out.println("Delete Response id is=->" +response.asString());
-		
-		
-
 		System.out.println("Status Code is-->"+response.getStatusCode());
-		
 		assertEquals(200,response.getStatusCode());
 
 	}
@@ -68,7 +64,6 @@ public class Delete_Test_Demo {
 					.header("app-id","63c6f550f56487ebb8d435fc")
 					.contentType(ContentType.JSON)
 					.delete(id);
-			
 					
 		}
 		catch(Exception e)
@@ -82,7 +77,6 @@ public class Delete_Test_Demo {
 		jsonString = response.asString();
 		
 		assertEquals(404,response.getStatusCode());
-				
 			
 	}
 	
@@ -90,7 +84,6 @@ public class Delete_Test_Demo {
 	@Test
 	 public void userID_doesnotexist_BDDStyle()
 	 {
-		
 		 
 		 String id = "63c7d2e197083eeb7b1ad0c8";
 			
@@ -110,11 +103,5 @@ public class Delete_Test_Demo {
 			jsonString = response.asString();
 			System.out.println("Delete response is-->" +jsonString);
 		 
-		 
-		 
 	 }
-	
-	
-	
-
 }

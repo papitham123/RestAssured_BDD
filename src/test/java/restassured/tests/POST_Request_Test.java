@@ -21,10 +21,7 @@ public class POST_Request_Test {
 	Response response;
 	String jsonString;
 	
-	//Scenario 1: Add user using Map
-	
-	
-	
+	//Scenario 1: Add user using Map	
 	
 	@Test(priority=0)
 	public void createUser()
@@ -99,8 +96,6 @@ public class POST_Request_Test {
 		.then()
 			.statusCode(200)
 			.extract().response();
-			
-			
 			
 		jsonString=response.asString();
 		
